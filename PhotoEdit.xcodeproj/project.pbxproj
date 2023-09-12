@@ -13,6 +13,7 @@
 		7513BD002AA7024400830571 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7513BCFE2AA7024400830571 /* Main.storyboard */; };
 		7513BD022AA7024600830571 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7513BD012AA7024600830571 /* Assets.xcassets */; };
 		7513BD052AA7024600830571 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7513BD032AA7024600830571 /* LaunchScreen.storyboard */; };
+		7513BD0E2AA7036D00830571 /* CropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 7513BD0D2AA7036D00830571 /* CropViewController */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7513BD0E2AA7036D00830571 /* CropViewController in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = PhotoEdit;
+			packageProductDependencies = (
+				7513BD0D2AA7036D00830571 /* CropViewController */,
+			);
 			productName = PhotoEdit;
 			productReference = 7513BCF52AA7024400830571 /* PhotoEdit.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 7513BCEC2AA7024400830571;
+			packageReferences = (
+				7513BD0C2AA7036D00830571 /* XCRemoteSwiftPackageReference "TOCropViewController" */,
+			);
 			productRefGroup = 7513BCF62AA7024400830571 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -289,6 +297,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoEdit/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to select photo.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -316,6 +325,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoEdit/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to select photo.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -356,6 +366,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7513BD0C2AA7036D00830571 /* XCRemoteSwiftPackageReference "TOCropViewController" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TimOliver/TOCropViewController.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7513BD0D2AA7036D00830571 /* CropViewController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7513BD0C2AA7036D00830571 /* XCRemoteSwiftPackageReference "TOCropViewController" */;
+			productName = CropViewController;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7513BCED2AA7024400830571 /* Project object */;
 }
